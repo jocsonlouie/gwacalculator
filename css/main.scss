@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
+$yellow: #FCF488;
+$bg: #3E3D3D;
+
+body, html {
+    margin: 0;
+    margin: 0;
+    background-color: $bg;
+    color: $yellow;
+    font-family: 'Montserrat', sans-serif;
+    clip-path: polygon(0 0, 75% 0, 16% 19%, 0% 100%) $yellow;
+
+}
+
+.container {
+    text-align: center;
+    padding: 1em;
+}
+
+a {
+    color: $yellow;
+}
+
+.subject-wrapper {
+    color: white;
+    background-color: lighten($color: $bg, $amount: 5);
+    border-radius: 10px;
+    padding: 1em;
+}
+
+form{
+    font-size: .8em;
+    input {
+       margin-bottom: 1em;
+   }
+}
+
+footer {
+    margin-top: 5em;
+    font-size: .8em;
+
+    .img-footer {
+        width: 35px;
+        margin-bottom: 1em;
+    }
+
+    p {
+        margin-bottom: 0;
+    }
+}
+
+
+.add, .del, .splide__list {
+    margin-top: 2em;
+}
+
+
+input{
+    text-align: center;
+    color: white;
+    margin-top: .5em;
+    padding: .5em;
+    background-color: $bg;
+    border: none;
+}
+
+hr{
+    opacity: 40%;
+}
+
+h1 {
+    font-size: 1.4em;
+    margin-bottom: 0;
+}
+
+p {
+    margin-top: 0;
+}
+
+button {
+    background: none;
+	border: none;
+	padding: 0;
+	cursor: pointer;
+	outline: inherit;
+}
+
+.btn-gwa {
+    background-color: $yellow;
+    margin-top: 1em;
+    padding: 8px;
+    width: 150px;
+    border-radius: 10px;
+    font-size: 1em;
+    font-family: inherit;
+    font-weight: bold;
+    box-shadow: 8px 0px 2px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+
+    &:hover{
+        background-color: $yellow;
+        box-shadow: 5px 5px 10px rgba(229, 211, 46, 0.4); 
+        
+    }
+}
+
+
+//Modal
+.btn-peek{
+    color: white;
+    border-radius: 4px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    background: rgb(28, 184, 65);
+    padding: 10px;
+    color: $yellow;
+    margin-top: 50px;
+
+}
+
+.modal {
+    display: none;
+    background-color: #FCF488;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+    
+}
+
+small {
+    color: rgba(255, 255, 255, 0.719);
+    margin-left: 20px;
+}
+
+.modal-content{
+    background-color: #383838ed;
+    margin: 10% auto;
+    padding: 10px;
+    width: 80%;
+    margin: 0% 0px;
+    position: fixed;
+    left: 8.1%;
+    bottom: 5%;
+    animation: modalopen .8s ease;
+}
+
+.modal-title{
+    margin-left: 30px;
+}
+
+@keyframes modalopen{
+    from{
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+.computes {
+    color: black;
+    border-radius: 5px !important;
+}
+
+.btn-close{
+    color: $yellow;
+    float: right;
+    font-size: 45px;
+    cursor: pointer;
+}
+
+.btn-close:hover{
+    color: darken($color: $yellow, $amount: 40%)
+}
+
+.btn-reset {
+    padding: 8px;
+    background-color: tomato;
+    border-radius: 5px;
+    margin: 4px;
+    color: black;
+}
+
+//Modal End
+
+//Queries
+
+@media only screen and (min-width: 768px) {
+    .container {
+        width:80%;
+        margin: 0 auto;
+       
+    }
+
+    .modal {
+        margin:  0 auto;
+    }
+    
+    .modal-content{
+        background-color: #383838ed;
+        margin: 0 auto;
+        padding: 10px;
+        width: 60%;
+        margin: 0% 0px;
+        position: relative;
+        top: 20%;
+        left: 20%;
+    }
+
+    .svgbg {
+        position: absolute !important;
+        top: -30px;
+    }
+    
+
+    .img-book{ 
+        margin-top: 4em;
+    }
+    .splide__arrow--next {
+        right: -4em !important;
+    }
+
+    .splide__arrow--prev {
+        left: -4em !important;
+    }
+
+}
+
+@media only screen and (min-width: 1220px) {
+    .container {
+        width: 70%;
+    }
+
+    .modal-content {
+        font-size: 1.3em;    
+    }
+
+    .svgbg {
+        top: -120px;
+    }
+
+    #previousGrade, #classStandingGrade, #examGrades {
+        font-size: 1em;
+        padding: .8em;
+        width: 30%;
+    }
+
+    #txt-grade {
+        font-size: 1.5em;
+    }
+
+    .computes {
+        padding: .8em;
+    }
+
+    .btn-reset {
+        padding: .8em;
+    }
+    
+}
+
+@media only screen and (min-width: 1920px) {
+    .container {
+        width: 55%;
+    }
+
+    .splide__arrow--next {
+        right: -6em !important;
+    }
+
+    .splide__arrow--prev {
+        left: -6em !important;
+    }
+
+    .modal-content{
+        width: 40%;
+        left: 30%;
+    }
+
+    .svgbg {
+        top: -200px;
+    }
+
+    .hrGrade{
+        width: 30% !important;
+    }
+}
+
+@media only screen and (min-width: 2560px) {
+    .container {
+        width: 45%;
+    }
+
+    .modal-content{
+        width: 30%;
+        left: 35%;
+    }
+
+}
+

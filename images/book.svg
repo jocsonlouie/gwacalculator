@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="66.401" height="72.504" viewBox="0 0 66.401 72.504">
+  <g id="book" transform="translate(-120.213 -29.26)">
+    <circle id="Ellipse_1" data-name="Ellipse 1" cx="31.909" cy="31.909" r="31.909" transform="translate(122.795 37.945)" fill="#fcf488" opacity="0.3"/>
+    <path id="Path_8" data-name="Path 8" d="M374.756,85.873,353.51,111.651l31.444,37.11,20.963-24.645Z" transform="translate(-233.156 -56.613)" fill="#fcf488"/>
+    <path id="Path_9" data-name="Path 9" d="M374.756,85.873,353.51,111.651l31.444,37.11,20.963-24.645Z" transform="translate(-233.156 -56.613)" opacity="0.1"/>
+    <path id="Path_10" data-name="Path 10" d="M439.739,291.995h0a10.676,10.676,0,0,1,1.732-2.313L460.985,269.9s6.8-1.133,8.215,2.266l-24.929,20.4Z" transform="translate(-318.535 -236.674)" fill="#f2f2f2"/>
+    <path id="Path_11" data-name="Path 11" d="M434.8,288.913,463.7,333.1s2.833,1.983,5.666.85l29.6-19.971-31.444-47.591-28.328,22.1Z" transform="translate(-314.592 -234.016)" fill="#fcf488"/>
+    <rect id="Rectangle_1" data-name="Rectangle 1" width="22.327" height="0.459" transform="matrix(0.812, -0.584, 0.584, 0.812, 131.268, 52.3)" fill="#3f3d56"/>
+    <rect id="Rectangle_2" data-name="Rectangle 2" width="0.459" height="43.134" transform="matrix(0.834, -0.552, 0.552, 0.834, 130.645, 57.431)" fill="#3f3d56"/>
+    <rect id="Rectangle_3" data-name="Rectangle 3" width="23.91" height="0.459" transform="translate(157.329 94.232) rotate(-36.344)" fill="#3f3d56"/>
+    <rect id="Rectangle_4" data-name="Rectangle 4" width="0.459" height="43.142" transform="translate(152.46 40.155) rotate(-34.838)" fill="#3f3d56"/>
+    <rect id="Rectangle_5" data-name="Rectangle 5" width="30.425" height="0.283" transform="translate(122.808 53.517) rotate(-42.545)" fill="#3f3d56"/>
+    <rect id="Rectangle_6" data-name="Rectangle 6" width="31.251" height="0.283" transform="translate(123.664 53.803) rotate(-41.439)" fill="#3f3d56"/>
+    <rect id="Rectangle_7" data-name="Rectangle 7" width="31.661" height="0.283" transform="matrix(0.768, -0.64, 0.64, 0.768, 124.237, 53.805)" fill="#3f3d56"/>
+  </g>
+</svg>
