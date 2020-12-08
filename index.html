@@ -9,18 +9,12 @@
     <meta property="og:image" content="https://i.ibb.co/3fDp0fg/metapic-gwa-2x.png">
     <meta property="og:url" content="https://gwacalculate.netlify.app/">
 
-    <meta name="twitter:title" content="GWA Calculator">
+    
+    <meta name="twitter:title" content="GWA Calculato">
     <meta name="twitter:description" content="Calculate your GWA and Class Standing with easy navigation and user-friendly interface.">
     <meta name="twitter:image" content="https://i.ibb.co/3fDp0fg/metapic-gwa-2x.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta charset="UTF-8" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" type="text/css" href="css/glider.css" />
@@ -301,60 +295,67 @@
 
       <button class="btn-gwa" id="btn-peek">Raw Grade</button>
 
+
       <div class="modal" id="modal">
-        <div class="modal-content" id="modal-content">
+        <div class="modal-wrapper">
+
+          <div class="modal-image-grade">
+            <img src="images/grade.png" alt="TIP Grade" class="img-grade">
+          </div>
+
+          <div class="modal-contentv2">
+            <h3 class="modal-title">Class Standing Grade</h3>
+            <form class="cs-form">
+              <label for="previousGrade">Your Previous Grade:</label><br />
+              <input
+                class="subj-grade"
+                type="number"
+                id="previousGrade"
+                placeholder="87.72"
+                name="numGrade"
+              /><br />
+  
+              <label for="classStandingGrade">Class Standing Grade:</label><br />
+              <input
+                class="subj-grade"
+                type="number"
+                id="classStandingGrade"
+                placeholder="92.52"
+                name="numGrade"
+                required
+              /><br />
+  
+              <label for="examGrades">Exam Grade:</label><br />
+              <input
+                class="subj-grade"
+                type="number"
+                id="examGrades"
+                placeholder="76.81"
+                name="numGrade"
+                required
+              /><br /><br />
+  
+              <hr class="hrGrade"/>
+              <h3 id="txt-grade">Your Grade</h3>
+              <hr class="hrGrade"/>
+              <br />
+  
+              <a onclick="calculateGrade()" class="btn-gwa computes"> Compute</a><a onclick="resetGrades()" class="btn-reset">✖</a>
+              <br /><br />
+              <br>
+              <small
+                >*The grades should be the same as your grade in ARIS.
+                Directly.</small
+              ><br /><br />
+            </form>
+          </div>
           <span class="btn-close" id="btn-close">&times;</span>
-          <h3 class="modal-title">Class Standing Grade</h3>
-          <br />
-          <form class="cs-form">
-            <label for="previousGrade">Your Previous Grade:</label><br />
-            <input
-              class="subj-grade"
-              type="number"
-              id="previousGrade"
-              placeholder="87.72"
-              name="numGrade"
-            /><br />
-
-            <label for="classStandingGrade">Class Standing Grade:</label><br />
-            <input
-              class="subj-grade"
-              type="number"
-              id="classStandingGrade"
-              placeholder="92.52"
-              name="numGrade"
-              required
-            /><br />
-
-            <label for="examGrades">Exam Grade:</label><br />
-            <input
-              class="subj-grade"
-              type="number"
-              id="examGrades"
-              placeholder="76.81"
-              name="numGrade"
-              required
-            /><br /><br />
-
-            <hr class="hrGrade"/>
-            <h3 id="txt-grade">Your Grade</h3>
-            <hr class="hrGrade"/>
-            <br />
-
-            <a onclick="calculateGrade()" class="btn-gwa computes"> Compute</a><a onclick="resetGrades()" class="btn-reset">✖</a>
-            <br /><br />
-            <br>
-            <small
-              >*The grades should be the same as your grade in ARIS.
-              Directly.</small
-            ><br /><br />
-          </form>
         </div>
       </div>
 
       <footer>
-        <a href="https://jocsonlouie.netlify.app/" target="_blank" class="imglogo"><img src="images/logoz.png" class="img-footer" alt=""></a>
-        <p>Handcrafted by <a href="https://jocsonlouie.netlify.app/" target="_blank">Louie Jocson</a></p>
+        <a href="https://jocsonlouie.me/" target="_blank" class="imglogo"><img src="images/yellowlogo.png" class="img-footer" alt=""></a>
+        <p>Handcrafted by <a href="https://jocsonlouie.me/" target="_blank">Louie Jocson</a></p>
         <p>Copyright &copy; <script>document.write(new Date().getFullYear())</script> </p>
       </footer>
 
@@ -450,6 +451,7 @@
         document.getElementById("previousGrade").value = ''
         document.getElementById("classStandingGrade").value = ''
         document.getElementById("examGrades").value = ''
+        
       }
 
       var splide = new Splide(".splide", {

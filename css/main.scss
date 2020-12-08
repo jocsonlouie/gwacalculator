@@ -40,7 +40,7 @@ footer {
     font-size: .8em;
 
     .img-footer {
-        width: 35px;
+        width: 55px;
         margin-bottom: 1em;
     }
 
@@ -85,6 +85,20 @@ button {
 	outline: inherit;
 }
 
+
+.flex-parent{
+    display: flex;
+}
+
+.flex-child-grade{
+    align-self: center;
+}
+
+.img-grade{
+    width: 500px;
+}
+
+
 .btn-gwa {
     background-color: $yellow;
     margin-top: 1em;
@@ -117,17 +131,22 @@ button {
 
 }
 
+.modal-contentv2{
+    margin: 50px;
+}
+
+.modal-image-grade{
+    margin: 50px;
+}
+
 .modal {
     display: none;
-    background-color: #FCF488;
     position: fixed;
     z-index: 1;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     overflow: auto;
-    background-color: rgba(0,0,0,0.5);
     
 }
 
@@ -139,17 +158,21 @@ small {
 .modal-content{
     background-color: #383838ed;
     margin: 10% auto;
-    padding: 10px;
-    width: 80%;
+    padding: 30px;
     margin: 0% 0px;
+    width: 100%;
     position: fixed;
     left: 8.1%;
     bottom: 5%;
     animation: modalopen .8s ease;
 }
 
-.modal-title{
-    margin-left: 30px;
+.modal-wrapper{
+    display: flex;
+    justify-content: center;
+    background-color: #363636;
+    animation: modalopen .8s ease;
+    border-radius: 5px;
 }
 
 @keyframes modalopen{
@@ -171,9 +194,11 @@ small {
 
 .btn-close{
     color: $yellow;
-    float: right;
     font-size: 45px;
     cursor: pointer;
+    position: absolute;
+    right: 3%;
+    
 }
 
 .btn-close:hover{
@@ -191,6 +216,36 @@ small {
 //Modal End
 
 //Queries
+@media only screen and (max-width: 415px) {
+
+    .modal-wrapper{
+        flex-direction: column;
+    }
+
+    .img-grade{
+        width: 250px;
+    }
+
+    .modal{
+        position: relative;
+    }
+
+    .modal-contentv2{
+        margin: 10px;
+    }
+
+    .modal-image-grade{
+        margin: 20px;
+        margin-top: 50px;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    .btn-close {
+        top: 0%;
+    }
+    
+}
+
 
 @media only screen and (min-width: 768px) {
     .container {
@@ -199,15 +254,28 @@ small {
        
     }
 
+    .modal-image-grade{
+        align-self: center;
+    }
+
+    .img-grade{
+        width: 350px;
+    }
+
+    .modal-contentv2{
+        margin: 20px;
+    }
+
     .modal {
         margin:  0 auto;
     }
+
     
     .modal-content{
         background-color: #383838ed;
         margin: 0 auto;
         padding: 10px;
-        width: 60%;
+        width: 100%;
         margin: 0% 0px;
         position: relative;
         top: 20%;
@@ -242,6 +310,7 @@ small {
         font-size: 1.3em;    
     }
 
+
     .svgbg {
         top: -120px;
     }
@@ -249,7 +318,6 @@ small {
     #previousGrade, #classStandingGrade, #examGrades {
         font-size: 1em;
         padding: .8em;
-        width: 30%;
     }
 
     #txt-grade {
@@ -275,12 +343,15 @@ small {
         right: -6em !important;
     }
 
+    .img-grade{
+        width: 500px;
+    }
     .splide__arrow--prev {
         left: -6em !important;
     }
 
     .modal-content{
-        width: 40%;
+        width: 50%;
         left: 30%;
     }
 
@@ -289,7 +360,7 @@ small {
     }
 
     .hrGrade{
-        width: 30% !important;
+        width: 50% !important;
     }
 }
 
